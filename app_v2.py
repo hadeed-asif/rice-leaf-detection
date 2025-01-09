@@ -1,11 +1,11 @@
 import streamlit as st
 from PIL import Image
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # Load the pre-trained model
-model_path = "model_file.h5"  # Replace with the actual path
+model_path = "danish_model_2.h5"  # Replace with the actual path
 model = load_model(model_path)
 
 # Function to preprocess the image
@@ -38,7 +38,7 @@ def main():
         # Get class labels (replace with your actual class labels)
         class_labels = ["class1", "class2", "class3"]  # Example
 
-        # Display the predicted class and probability
+        # Display the predicted class and probabilitys
         st.write("Predicted Class:", class_labels[predicted_class])
         st.write("Probability:", predictions[0][predicted_class])
 
