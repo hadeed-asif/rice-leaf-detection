@@ -1,12 +1,13 @@
 import streamlit as st
+import tensorflow
+from tensorflow import keras
 from PIL import Image
-from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
 # Load the pre-trained model (fixed space in path)
 model_path = "danish_model_2.h5"
-model = load_model(model_path)
+model = tensorflow.keras.models(model_path)
 
 # Function to preprocess the image
 def preprocess_image(img_path):
